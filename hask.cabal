@@ -1,0 +1,22 @@
+cabal-version:   3.12
+name:            hask
+version:         0.1.0.0
+license:         NONE
+author:          sudeephb
+maintainer:      sudeephb19@gmail.com
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable hask
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.3.0,
+        http-conduit,
+        bytestring
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
