@@ -14,7 +14,7 @@ executable hask
     import:           warnings
     main-is:          Main.hs
     build-depends:
-        base ^>=4.18.3.0,
+        base >=4.18.3.0,
         http-conduit,
         bytestring
     hs-source-dirs:   app

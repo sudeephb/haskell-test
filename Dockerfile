@@ -1,13 +1,15 @@
 FROM haskell:latest
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/hask
 
-# COPY hask.cabal cabal.project ./
-# RUN cabal update && cabal build --only-dependencies
+COPY hask.cabal ./
+RUN cabal update && cabal build --only-dependencies
 
 COPY . .
 
 # Build the executable file
-RUN cabal build
+# RUN cabal update
+
+RUN cabal build hask
 
 RUN cabal run hask
